@@ -20,15 +20,16 @@
         </legend>
 
         <label for="surname">
-          Surname
+          Surname:
           <input
+          maxlength="5"
           id="surname"
           type="text"
           autocomplete="off">
         </label>
 
         <label for="name">
-          Name
+          Name:
           <input
           id="name"
           type="text"
@@ -46,12 +47,12 @@
         </label>
 
         <label for="full-aga">
-          Full date of birth
+          Full date of birth:
           <input id="full-aga" type="date">
         </label>
 
         <label for="accept">
-          I accept the tern of the agreement
+          I accept the term of the agreement
           <input id="accept" type="checkbox">
         </label>
       </fieldset>
@@ -62,7 +63,7 @@
         </legend>
 
         <label for="email">
-          E-mail
+          E-mail:
           <input
           id="email"
           type="email"
@@ -71,7 +72,7 @@
         </label>
 
         <label for="password">
-          Password
+          Password:
           <input id="password" type="password">
         </label>
       </fieldset>
@@ -81,26 +82,26 @@
           An interesting fact about you!
         </legend>
 
-        <div class="pet-wrap">
+        <section>
           Do you love cats?
-          <label for="yes">
+          <label style="display: inline-block;" for="yes">
             <input
             name="pet"
             type="radio"
             value="yes"
             id="yes">
-            YES
+            Yes
           </label>
-          <label for="no">
+          <label style="display: inline-block;" for="no">
             <input
             name="pet"
             type="radio"
             value="no"
             id="no"
             >
-            NO
+            No
           </label>
-        </div>
+        </section>
 
         <label for="color">
           What is your favorite color?
@@ -116,7 +117,7 @@
         </label>
 
         <label for="car">
-          What are your favorite brand of cards?
+          <span>What are your favorite brand of cars?</span>
           <select
           name="car"
           id="car"
@@ -128,16 +129,23 @@
         </label>
 
         <label for="work">
-          Howe dou you rate our work?
-          <input id="work" type="range">
+          <span style="margin-right: 4px;">Howe dou you rate our work?</span>
+          <input 
+            id="work"
+           type="range"
+           min="0"
+           max="10"
+           step="1"
+           value="9"
+           >
         </label>
       </fieldset>
 
       <fieldset>
-        <legend>Additional ifo</legend>
+        <legend>Additional info</legend>
 
         <label for="textarea">
-          Comments
+          Comments:
           <textarea
             name="textarea"
             id="textarea"
@@ -151,9 +159,11 @@
           <select
             name="recomendation"
             id="recomendation"
-            multiple size="1">
-            <option value="BMW" selected>yes</option>
-            <option value="Audi">no</option>
+            size="1"
+            >
+            <option value="" selected disabled></option>
+            <option value="no">no</option>
+            <option value="yes">yes</option>
           </select>
         </label>
       </fieldset>
